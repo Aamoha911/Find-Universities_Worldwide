@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}University Search{% endblock %}
+
+{% block content %}
+    <section class="hero">
+        <div class="container">
+            <h1>Find Universities Worldwide</h1>
+            <p>Discover institutions by country with ease.</p>
+        </div>
+    </section>
+    
+    <div class="container">
+        <form method="get" action="{{ url_for('index') }}" class="search-form">
+            <label for="country">Choose a country:</label>
+            <select id="country" name="country" onchange="this.form.submit()">
+                <option value="">Select a country</option>
+                {% for country in countries %}
+                    <option value="{{ country }}" {% if request.args.get('country') == country %}selected{% endif %}>{{ country }}</option>
+                {% endfor %}
+            </select>
+        </form>
+
+        {% if universities %}
+            <section class="results">
+                <h2>Results:</h2>
+                <ul class="results-list">
+                    {% for university in universities %}
+                        <li>
+                            <strong>Name:</strong> <a href="{{ university.web_pages[0] }}" target="_blank">{{ university.name }}</a><br>
+                            <strong>Country:</strong> {{ university.country }}<br>
+                            <strong>Web Pages:</strong>
+                            <ul>
+                                {% for page in university.web_pages %}
+                                    <li><a href="{{ page }}" target="_blank">{{ page }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        {% else %}
+            <p>No results found.</p>
+        {% endif %}
+    </div>
+{% endblock %}

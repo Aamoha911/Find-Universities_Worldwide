@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}Donate{% endblock %}
+
+{% block content %}
+    <section id="donate-container" style="
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    ">
+        <h1 id="donate-title" style="
+            font-size: 2.5rem;
+            color: #004d99;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 10px;
+        ">Donate</h1>
+        <p id="donate-intro" style="
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        ">We appreciate your support in helping us continue our mission. Your donations enable us to enhance our services and reach more people.</p>
+        <p id="donate-contact" style="
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        ">To make a donation, please contact us at <a id="donate-email" href="mailto:support@example.com" style="
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+        ">support@example.com</a>.</p>
+        <p id="donate-thanks" style="
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        ">Thank you for your generosity!</p>
+    </section>
+{% endblock %}
