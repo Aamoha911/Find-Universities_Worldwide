@@ -8,7 +8,7 @@ University Search is a web application designed to help users find universities 
 The application provides a user-friendly interface to search for universities by country, 
 offering a streamlined way to access higher education information.
 
-**[Website Here]("Aamoha123.pythonanywhere.com")**
+**[Website Here]("https://www.amoha123.pythonanywhere.com")**
 
 
 ![Screenshot 2024-09-12 163154](https://github.com/user-attachments/assets/6da073fd-d7ea-4b21-ba96-c1fd485552d3)
