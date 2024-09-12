@@ -3,7 +3,7 @@
 ## Overview
 
 University Search is a web application designed to help users find universities around the world easily. 
-The application provides a user-friendly interface to search for universities by country and name, 
+The application provides a user-friendly interface to search for universities by country, 
 offering a streamlined way to access higher education information.
 
 
